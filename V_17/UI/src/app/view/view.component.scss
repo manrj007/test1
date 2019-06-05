@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    .file_upload{
+        margin: 100px 20px 0px 20px;
+        width: 30vw;
+        float: left;
+        height: 150px;
+    }
+}
+
+.submit-button {
+    width: 93vw;
+    float: right;
+}
+.progress-bar {
+    margin: 10px 10px 10px 20px;
+    width: 95vw;
+}
+.grey {
+    background: #85BB25;
+    color: #fff;
+}

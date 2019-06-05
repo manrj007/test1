@@ -1,0 +1,39 @@
+<mat-progress-bar *ngIf="showProgress" class="progress-bar" mode="indeterminate"></mat-progress-bar>
+<div class="container">
+  <div class="file_upload">
+    <mat-card>
+      <h3>Upload Training Document</h3>
+      <div class="upload-button">
+        <input type="file" name="fileUpload_training" id="fileUpload_training" ng2FileSelect
+          [uploader]="uploader_training" (change)="triggerTraining(uploader_training.queue);selectTraining(); ">
+      </div>
+      <p style="font-size: 13px; margin: 5px 0px;"> * Please upload the training documents in .txt format.</p>
+    </mat-card>
+  </div>
+  <div class="file_upload">
+    <mat-card>
+      <h3>Upload Testing Document</h3>
+      <div class="upload-button">
+        <input name="fileUpload_testing" id="fileUpload_testing" type="file" #fileUpload_testing ng2FileSelect
+          [uploader]="uploader_testing" (change)="triggerTraining(uploader_testing.queue);selectTesting();">
+      </div>
+      <p style="font-size: 13px; margin: 5px 0px;"> * Please upload the .txt version of OCR (testing) documents.</p>
+    </mat-card>
+  </div>
+  <div class="file_upload">
+    <mat-card>
+      <h3>Upload Testing PDF Document</h3>
+      <div class="upload-button">
+        <input name="fileUpload_testing_pdf" id="fileUpload_testing_pdf" type="file" ng2FileSelect
+          #fileUpload_testing_pdf [uploader]="uploader_testing_pdf"
+          (change)="triggerTraining(uploader_testing_pdf.queue); selectTestingPdf();">
+      </div>
+      <p style="font-size: 13px; margin: 5px 0px;"> * Please upload the .pdf version of OCR (testing) documents.</p>
+    </mat-card>
+  </div>
+</div>
+
+<div style="margin-right: 3%; float: right;">
+  <button mat-raised-button class="grey" (click)="submit()"
+    [disabled]="!isTestingFileUploaded || !isTrainingFileUploaded">RUN</button>
+</div>

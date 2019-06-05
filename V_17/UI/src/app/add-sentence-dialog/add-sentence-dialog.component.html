@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Selected Sentence For Training</h1>
+<div mat-dialog-content>
+  <div>{{data?.sentence}}</div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]>Cancel</button>
+  <button mat-button (click)="addSentence(data)"cdkFocusInitial>Add</button>
+</div>

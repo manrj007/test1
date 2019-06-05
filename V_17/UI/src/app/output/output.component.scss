@@ -1,0 +1,49 @@
+.outer-container{
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    margin: 50px;
+
+    .container {
+       
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        overflow-y:scroll;
+        height: 500px;
+        .left_container{
+            margin-bottom: 10px;
+            width: 30vw;
+           
+           
+            .text{
+                width: 350px;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+        }
+    }
+    .output-container{
+        height: 500px;
+        overflow-y: auto;
+        width: 50vw;
+        display: flex;
+        ::ng-deep .ng2-pdf-viewer-container > .pdfViewer  > .page > .textLayer {
+            opacity: 0.4 !important;
+    
+            .highlight {
+                background-color: #faff0c !important;
+                margin-top: -5px;
+            }
+        } 
+    }
+
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: #000000;
+}

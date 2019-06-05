@@ -1,0 +1,41 @@
+<div class="cont">
+  <mat-card class="card">
+      <mat-form-field>
+          <mat-select placeholder="Choose Keyword">
+            <mat-option *ngFor="let keyword of keywords" [value]="keyword.name">
+              {{keyword.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    <!-- <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let keyword of keywords" [selectable]="selectable" [removable]="removable" (removed)="remove(keyword)">
+          {{keyword.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="New keyword..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+          (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field> -->
+  </mat-card>
+
+  <div class="upload-cont">
+    <div class="actual-upload-area">
+      <div class="before-drag-content" (dragover)="fileUploadEvent($event)">
+        <p>
+          <mat-icon class="icon_size">file_copy</mat-icon>
+        </p>
+        <p>Drop the Document here.</p>
+      </div>
+      <input type="file" (change)="fileUploadEvent($event)">
+    </div>
+    <div class="actual-upload-area">
+      <div class="before-drag-content">
+        <p>
+          <mat-icon class="icon_size">file_copy</mat-icon>
+        </p>
+        <p>Drop the Duplicate file here.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.outer-container {
+    max-height: 700px;
+    overflow-y: auto;
+
+    ::ng-deep .ng2-pdf-viewer-container > .pdfViewer  > .page > .textLayer {
+        opacity: 0.4 !important;
+
+        .highlight {
+            background-color: yellow !important;
+            margin-top: -5px;
+        }
+    } 
+}

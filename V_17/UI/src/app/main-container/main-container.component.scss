@@ -1,0 +1,88 @@
+// .cont {
+//     padding: 30px;
+
+//     .upload-area {
+//         height: 150px;
+//         width: 75vw;
+//         border: 2px dashed gray;
+
+//         &:hover {
+//             border: 3px dashed #3f51b5;
+//             cursor: pointer;
+//         }
+
+//         .before-drag-content{
+//             display: flex;
+//             flex-direction: row;
+//             margin-top:40px;
+//             justify-content: center;
+//             font-size: 24px;
+//             color: #696666;
+//             vertical-align: middle;
+
+//             .icon_size{
+//                 font-size: 24px;
+//                 margin-right: 20px;
+//             }
+            
+//         }
+//     }
+// }
+
+.main-container {
+   // padding: 30px;
+    display: flex;
+    flex-direction: row;
+    min-height: 550px;
+    width: 99vw;
+    
+    .dummy-panel {
+        width: 8vw;
+    }
+    .statement-panel {
+        width: 80vw;
+        cursor: pointer;
+
+        .cards-statement {
+            margin: 10px;
+
+            .icon_size {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+table {
+    width: 100%;
+  }
+.download_button{
+    margin: 20px;
+    float: right;
+}
+.file_upload{
+    margin: 10px 20px;
+    width: 90vw;
+    height: 600px;
+
+    .upload-button {
+        margin: 20px;
+    }
+}
+    .select_file{
+        margin: 10px 20px;
+        width: 30vw;
+        height: 600px;
+        float: left;
+        
+    }
+    .outer-container{
+        margin: 10px 20px;
+        width: 60vw;
+        height: 600px;
+        float: left;
+    }
+.grey {
+    background: #e4e0e0;
+    color: #000000;
+}

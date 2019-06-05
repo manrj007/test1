@@ -1,0 +1,28 @@
+<div class="outer-container">
+
+  <div class="container">
+
+    <div class="switch-container" style="margin-top: 20px 0px 30px 0px;">
+      <form [formGroup]="form">
+        <mat-radio-group class="radio-group" formControlName='model_type'  (change)="onChange()" >
+          <mat-radio-button  value="linient" >Less Precise</mat-radio-button>
+          <mat-radio-button  value="medium" >Moderate</mat-radio-button>
+          <mat-radio-button  value="strict" >More Precise</mat-radio-button>
+        </mat-radio-group>
+      </form>
+    </div>
+
+    <div *ngFor="let item of finalSentences" class="left_container">
+      <mat-card [matTooltip]="item" matTooltipPosition="after" (click)="search(item)" style="cursor:pointer">
+        <mat-card-subtitle>
+          <div class="text">
+            {{item}}
+          </div>
+        </mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+  <mat-card class="output-container">
+    <pdf-viewer [src]="src" [original-size]="false"></pdf-viewer>
+  </mat-card>
+</div>
